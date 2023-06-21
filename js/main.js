@@ -10,8 +10,6 @@ form.addEventListener('submit', async (event) => {
     const res = await data.json()
     console.log(res.results);
     
-    res.innerHTML = ''
-    
     res.results.forEach(element => {
         card.innerHTML += `<div class = "info">
         <img src = "https://image.tmdb.org/t/p/w500/${element.poster_path}" alt="">
@@ -23,6 +21,7 @@ form.addEventListener('submit', async (event) => {
     });
     
 })
+
 const moviePopular = async () => {
     const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=fdff2360f3ab6fe1750a9be6ebab1eba');
     const data = await response.json();
