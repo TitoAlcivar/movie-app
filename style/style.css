@@ -1,16 +1,46 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
 	outline: none;
 }
-#moviepopular{
-    display: flex;
-    flex-direction: column;
-   
+body{
+	background-color:rgb(151, 151, 151);
 }
-.popular{
-    
+.header {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	padding: 10px;
+
 }
-    
+
+#movieapp {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+
+}
+
+#movie {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 50px;
+
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(228, 156, 156, 0.274);
+	
+}
+
+.info img{
+	width: 200px;
+	height: 300px;
+}
