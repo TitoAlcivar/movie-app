@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const input = document.querySelector('#id').value
     Api(input)
-
+ 
 })
 
 const Api = async (input) => {
@@ -33,19 +33,19 @@ const Api = async (input) => {
 const print = (movies) => {
 
     movies.forEach(element => {
-
+5
         card.innerHTML += `
                            <div class = "info">
+                           <a href = "./pages/movie.html?id=${element.id}">
                            <img src = "https://image.tmdb.org/t/p/w500/${element.poster_path}" alt="">
+                           </a>
                            <p>${element.original_title}</p>
                            <p>${element.release_date}</p>
-                           <button class = "favorite">Favorite</button>
+                           <button class = "favorite">
+                           <img src="img/pngtree-vector-star-icon-png-image_4187383.jpg" alt="Texto alternativo">
+                           </button>
                           </div>`
 
     })
 };
-
-
-
-
 
