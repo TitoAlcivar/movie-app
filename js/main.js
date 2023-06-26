@@ -19,9 +19,6 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const input = document.querySelector('#id').value
     Api(input)
-
-
-
 })
 
 const Api = async (input) => {
