@@ -106,14 +106,14 @@ body {
 	height: 300px;
 }
 
-#favorite {
+.favorite {
 	background-color: transparent;
 	outline: none;
 	cursor: pointer;
 	padding: 0;
 }
 
-#favorite img {
+.favorite img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

@@ -41,12 +41,21 @@ const print = (movies) => {
                            </a>
                            <p>${element.original_title}</p>
                            <p>${element.release_date}</p>
-                           <button id = "favorite">Favorite</button>
+                           <button class ="favorite">Favorite</button>
                           </div>`
 
     })
+    const buttons = document.querySelectorAll('.favorite')
 
-   
-
+    buttons.forEach((button, i) => {
+        button.addEventListener('click', () => {
+            const local = JSON.parse(localStorage.getItem('movies')) || []
+            local.push(
+                movies[i]
+            )
+            localStorage.setItem('movies', JSON.stringify(local))
+        })
+    })
 };
+
 
