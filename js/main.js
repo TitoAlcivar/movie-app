@@ -20,6 +20,8 @@ form.addEventListener('submit', async (event) => {
     const input = document.querySelector('#id').value
     Api(input)
 
+
+
 })
 
 const Api = async (input) => {
@@ -50,6 +52,7 @@ const print = (movies) => {
     buttons.forEach((button, i) => {
         button.addEventListener('click', () => {
             const local = JSON.parse(localStorage.getItem('movies')) || []
+            const l = local.filter(movie => movie.id === id)
             local.push(
                 movies[i]
             )
