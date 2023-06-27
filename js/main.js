@@ -21,10 +21,9 @@ form.addEventListener('submit', async (event) => {
     Api(input)
 })
 
-const Api = async (input) => {
+const Api = async (input) => { 
     card.innerHTML = ''
     const data = await getData(`https://api.themoviedb.org/3/search/movie?api_key=fdff2360f3ab6fe1750a9be6ebab1eba&query=${input}`)
-    console.log(data.results);
     print(data.results)
 
 }
